@@ -1,6 +1,16 @@
 body {
-    background-color: rgb(93, 93, 93);
+    background-image: url('./1351278.png    '); /* Reemplaza 'pokemon_background.jpg' con la ruta de tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+  }
+.title {
+    display: flex;
+    justify-content: center;
 }
+  
 h1 {
     display: flex;
     justify-content: center;
@@ -13,6 +23,7 @@ ul {
 }
 
 li {
+    background-color: rgba(28, 30, 30, 0.607);
     display: flex;
     flex-direction: column;
     align-items: center;
