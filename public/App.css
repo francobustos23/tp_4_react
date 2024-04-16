@@ -92,6 +92,7 @@ h3 {
 }
 
 .boton-eli {
+  margin: 5px;
   background-color: rgb(1, 1, 149);
   padding: 7px;
   border: none;
