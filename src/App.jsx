@@ -20,7 +20,7 @@ function App() {
           name: poke.name,
           img: poke.sprites.other.dream_world.front_default,
           shiny: poke.sprites.other["official-artwork"].front_shiny,
-          type: poke.types,
+          types: poke.types.map((type) => type.type.name), // Guardar los tipos en un array
         };
       });
 
@@ -41,8 +41,21 @@ function App() {
   const cambiar_a_shiny = (id) => {
     setPokemonShiny((prev) => ({
       ...prev,
-      [id]: !prev[id], // Cambiar el estado opuesto al estado actual
+      [id]: !prev[id], 
     }));
+  };
+
+  // Definir un objeto con los colores para cada tipo de carga
+  const tipo_colores_fondo = {
+    fire: "#e62122", // Ejemplo de color para tipo "fire"
+    water: "#2481ef", // Ejemplo de color para tipo "water"
+    grass: "#3ba123", // Ejemplo de color para tipo "grass"
+    bug: "#92a312",
+    normal: "#9fa29f",
+    poison: "#923fcc",
+    fairy: "#ef71ef",
+    electric: "#f9c000",
+    ground: "#92501b"
   };
 
   return (
@@ -64,18 +77,18 @@ function App() {
         <div className="listpoke">
           {pokemones.map((pokemon) => {
             return (
-              <div key={pokemon.id} className="list">
+              <div key={pokemon.id} className="list" style={{ backgroundColor: tipo_colores_fondo[pokemon.types[0]] }}>
                 <img
-                  src={pokemonShiny[pokemon.id] ? pokemon.shiny : pokemon.img} // Verifica si el Pokémon debe mostrarse en versión shiny
+                  src={pokemonShiny[pokemon.id] ? pokemon.shiny : pokemon.img} 
                   alt={pokemon.name}
                   id="img-pokemon"
                 />
                 <div>
                   <h2>{pokemon.name}</h2>
                   {/* <span>{pokemon.id}</span> */}
-                  <h3>Type: {pokemon.type.map((type) => type.type.name).join(", ")}</h3>
-                  <button onClick={() => cambiar_a_shiny(pokemon.id)} className="boton-eli">{pokemonShiny[pokemon.id] ? "⏪ Normal" : "Shiny ⏩"}</button>
-                  <button onClick={() => handleDeletePokemon(pokemon.id)} className="boton-eli">
+                  <h3 style={{ color: tipo_colores_fondo[pokemon.types[0]] }}>Type: {pokemon.types.join(", ")}</h3>
+                  <button onClick={() => cambiar_a_shiny(pokemon.id)} className="boton-eli">{pokemonShiny[pokemon.id] ? "⋘ Normal" : "Shiny ⋙"}</button>
+                  <button onClick={() => handleDeletePokemon(pokemon.id)} className="boton-shiny">
                     Eliminar
                   </button>
                 </div>

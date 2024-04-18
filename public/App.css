@@ -22,7 +22,7 @@ h1 {
 
 h2 {
   margin-top: 10px;
-  background-color: rgb(16, 29, 54);
+  background-color: rgb(48, 48, 48);
   border-radius: 5px;
   color: #fff;
 }
@@ -64,11 +64,16 @@ span {
   background-color: rgba(42, 42, 42, 0.298);
   border-radius: 10px;
 }
-
+a {
+  color: #ff7f0f90;
+  color: #1976d290; 
+  color: #4CAF50;
+}
 h3 {
-  color: #f3f04e;
-  background-color: #53521c;
+  color: #ffffff;
+  background-color: #0c0c0cfb;
   border-radius: 10px;
+  padding: 5px;
 }
 
 .boton {
@@ -90,10 +95,23 @@ h3 {
 .boton-color:hover, .boton-eli:hover {
   background-color: rgb(1, 1, 207);
 }
-
+.boton-shiny:hover {
+  background-color: rgb(207, 1, 1);
+}
 .boton-eli {
   margin: 5px;
   background-color: rgb(1, 1, 149);
+  padding: 7px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: medium;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.boton-shiny {
+  margin: 5px;
+  background-color: rgb(149, 1, 1);
   padding: 7px;
   border: none;
   border-radius: 5px;
