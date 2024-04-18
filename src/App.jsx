@@ -47,9 +47,9 @@ function App() {
 
   // Definir un objeto con los colores para cada tipo de carga
   const tipo_colores_fondo = {
-    fire: "#e62122", // Ejemplo de color para tipo "fire"
-    water: "#2481ef", // Ejemplo de color para tipo "water"
-    grass: "#3ba123", // Ejemplo de color para tipo "grass"
+    fire: "#e62122", 
+    water: "#2481ef", 
+    grass: "#3ba123", 
     bug: "#92a312",
     normal: "#9fa29f",
     poison: "#923fcc",

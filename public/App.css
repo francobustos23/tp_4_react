@@ -1,6 +1,5 @@
 body {
   background-image: url('./pikachufondo.jpg');
-  /* Reemplaza 'pokemon_background.jpg' con la ruta de tu imagen */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
